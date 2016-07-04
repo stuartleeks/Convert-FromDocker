@@ -13,9 +13,9 @@
 
 .TAGS docker
 
-.LICENSEURI https://github.com/stuartleeks/Convert-FromDocker/blob/master/LICENSE.md
+.LICENSEURI https://github.com/stuartleeks/ConvertFrom-Docker/blob/master/LICENSE.md
 
-.PROJECTURI https://github.com/stuartleeks/Convert-FromDocker
+.PROJECTURI https://github.com/stuartleeks/ConvertFrom-Docker
 
 .ICONURI 
 
