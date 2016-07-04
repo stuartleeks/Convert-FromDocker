@@ -1,3 +1,45 @@
+
+<#PSScriptInfo
+
+.VERSION 0.0.1
+
+.GUID c62ee4be-fc92-4ef8-aa20-af179105702a
+
+.AUTHOR Stuart Leeks
+
+.COMPANYNAME 
+
+.COPYRIGHT 
+
+.TAGS docker
+
+.LICENSEURI https://github.com/stuartleeks/Convert-FromDocker/blob/master/LICENSE.md
+
+.PROJECTURI https://github.com/stuartleeks/Convert-FromDocker
+
+.ICONURI 
+
+.EXTERNALMODULEDEPENDENCIES 
+
+.REQUIREDSCRIPTS 
+
+.EXTERNALSCRIPTDEPENDENCIES 
+
+.RELEASENOTES
+
+
+#>
+
+<# 
+
+.DESCRIPTION 
+ Script to parse docker output into PowerShell objects 
+
+#> 
+
+Param()
+
+
 function PascalName($name){
     $parts = $name.Split(" ")
     for($i = 0 ; $i -lt $parts.Length ; $i++){
