@@ -1,5 +1,5 @@
 # Deploy steps
 
 ```posh
-Publish-Script -Path Convert-FromDocker.ps1 -NuGetApiKey $powershellGarlleryKey
+Publish-Script -Path ConvertFrom-Docker.ps1 -NuGetApiKey $powershellGalleryKey
 ```
