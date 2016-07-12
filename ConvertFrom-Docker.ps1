@@ -43,14 +43,14 @@ Param(
 )
 
 
-function PascalName($name){
+function local:PascalName($name){
     $parts = $name.Split(" ")
     for($i = 0 ; $i -lt $parts.Length ; $i++){
         $parts[$i] = [char]::ToUpper($parts[$i][0]) + $parts[$i].SubString(1).ToLower();
     }
     $parts -join ""
 }
-function GetHeaderBreak($headerRow, $startPoint=0){
+function local:GetHeaderBreak($headerRow, $startPoint=0){
     $i = $startPoint
     while( $i + 1  -lt $headerRow.Length)
     {
@@ -62,7 +62,7 @@ function GetHeaderBreak($headerRow, $startPoint=0){
     }
     return -1
 }
-function GetHeaderNonBreak($headerRow, $startPoint=0){
+function local:GetHeaderNonBreak($headerRow, $startPoint=0){
     $i = $startPoint
     while( $i + 1  -lt $headerRow.Length)
     {
@@ -74,7 +74,7 @@ function GetHeaderNonBreak($headerRow, $startPoint=0){
     }
     return -1
 }
-function GetColumnInfo($headerRow){
+function local:GetColumnInfo($headerRow){
     $lastIndex = 0
     $i = 0
     while ($i -lt $headerRow.Length){
@@ -91,7 +91,7 @@ function GetColumnInfo($headerRow){
        }
     }
 }
-function ParseRow($row, $columnInfo) {
+function local:ParseRow($row, $columnInfo) {
     $values = @{}
     $columnInfo | ForEach-Object {
         if ($_.End -lt 0) {
@@ -103,7 +103,7 @@ function ParseRow($row, $columnInfo) {
     }
     New-Object PSObject -Property $values
 }
-function ConvertFrom-Docker(){
+function local:ConvertFrom-Docker(){
     begin{
         $positions = $null;
     }
