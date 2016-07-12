@@ -1,7 +1,7 @@
 
 <#PSScriptInfo
 
-.VERSION 0.0.1
+.VERSION 0.0.2
 
 .GUID c62ee4be-fc92-4ef8-aa20-af179105702a
 
@@ -37,7 +37,10 @@
 
 #> 
 
-Param()
+Param(
+    [Parameter(Mandatory=$true, ValueFromPipeline=$true)]
+    $input 
+)
 
 
 function PascalName($name){
@@ -118,3 +121,5 @@ function ConvertFrom-Docker(){
 }
 # e.g. :
 # docker --tls ps -a --no-trunc | ConvertFrom-Docker | ft
+
+$input | ConvertFrom-Docker
